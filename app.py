@@ -1,11 +1,7 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify
 import requests
 
 app = Flask(__name__)
-
-@app.route('/', methods=['GET'])
-def home():
-    return render_template('index.html')
 
 @app.route('/weather', methods=['GET'])
 def get_weather():
